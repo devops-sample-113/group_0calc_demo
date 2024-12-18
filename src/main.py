@@ -211,6 +211,19 @@ class CalculatorApp(ft.Container):
             self.result.value = self.result.value[:-1]
             if self.result.value == "":
                 self.result.value = "0"
+        elif action == "cubic" :
+            self.result.value = str(
+                self.format_number(
+                    float(self.result.value)**3
+                )
+            )
+        elif action == "abs" :
+            self.result.value = str(
+                self.format_number(
+                    abs(float(self.result.value))
+                )
+            )
+
         else:
             raise ValueError("Invalid action")
 
