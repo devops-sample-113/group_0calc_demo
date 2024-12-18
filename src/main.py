@@ -1,3 +1,4 @@
+import math
 import flet as ft
 from calculate import Calculator
 from buttons import DigitButton, OperatorButton, ActionButton
@@ -187,6 +188,18 @@ class CalculatorApp(ft.Container):
         if action == "clear":
             self.result.value = "0"
             self.reset()
+        elif action == "square":
+            self.result.value = str(
+                self.format_number(
+                    float(self.result.value)*float(self.result.value)
+                )
+            )
+        elif action == "sqrt":
+            self.result.value = str(
+                self.format_number(
+                    math.sqrt(float(self.result.value))
+                )
+            )
         elif action == "negate":
             self.result.value = str(
                 self.format_number(
