@@ -29,6 +29,41 @@ class CalculatorApp(ft.Container):
                 ft.Row(
                     expand=True,
                     controls=[
+                        DigitButton(
+                            text="pi",
+                            button_clicked=self.button_clicked,
+                            value=3.14,
+                        ),
+                        DigitButton(
+                            text="e",
+                            button_clicked=self.button_clicked,
+                            value=2.71,
+                        ),
+                        ActionButton(
+                            text="x^2",
+                            button_clicked=self.button_clicked,
+                            action="square",
+                        ),
+                        ActionButton(
+                            text="x^3",
+                            button_clicked=self.button_clicked,
+                            action="cubic",
+                        ),
+                        ActionButton(
+                            text="√",
+                            button_clicked=self.button_clicked,
+                            action="sqrt",
+                        ),
+                        ActionButton(
+                            text="|x|",
+                            button_clicked=self.button_clicked,
+                            action="abs",
+                        ),
+                    ]
+                ),
+                ft.Row(
+                    expand=True,
+                    controls=[
 
                         ActionButton(
                             text="AC",
